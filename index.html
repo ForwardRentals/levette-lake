@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Levette Lake — An entry in the Sea to Sky Trails</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A field guide to Levette Lake: a small alpine lake in the Tantalus area near Squamish, BC. Mirror water, Tantalus peaks, a 4x4 road, and the house rules that keep it the way it is.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f1ea;
+    --paper-deep: #ece6db;
+    --ink: #1c1917;
+    --ink-soft: #3f3a33;
+    --ink-mute: #7a7268;
+    --rule: #cdc6b8;
+    --moss: #2b3a2b;
+    --rust: #8a4a2c;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(28,25,23,0.025) 1px, transparent 1px);
+    background-size: 3px 3px;
+    z-index: 1;
+    opacity: 0.6;
+  }
+  ::selection { background: var(--ink); color: var(--paper); }
+
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--ink); }
+
+  h1, h2, h3, h4, .display {
+    font-family: "Fraunces", "Times New Roman", serif;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h1 { font-size: clamp(3.5rem, 9.5vw, 7.5rem); font-weight: 400; letter-spacing: -0.028em; }
+  h2 { font-size: clamp(2.15rem, 4.8vw, 3.5rem); font-weight: 400; letter-spacing: -0.025em; }
+  h3 { font-size: 1.55rem; font-weight: 500; line-height: 1.22; letter-spacing: -0.012em; }
+
+  em, .italic { font-style: italic; font-weight: 400; }
+
+  p { margin: 0 0 1.15rem; color: var(--ink-soft); font-size: 1.075rem; line-height: 1.72; }
+  p.lead {
+    font-family: "Fraunces", serif;
+    font-size: clamp(1.4rem, 2.3vw, 1.8rem);
+    line-height: 1.45;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+  }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 2.25rem; }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 2.25rem; }
+
+  /* ---------- LINE LABELS ---------- */
+  .eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-mute);
+    display: inline-flex; align-items: center; gap: 0.8rem;
+  }
+  .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--ink-mute);
+  }
+  .roman {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-mute);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- NAV ---------- */
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245,241,234,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav.top .inner {
+    max-width: 1240px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 2.25rem;
+  }
+  .mark {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-family: "Fraunces", serif;
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--ink);
+    border: none;
+  }
+  .mark svg { color: var(--ink); }
+  .mark-text { line-height: 1; }
+  .mark-text small { display: block; font-family: "Inter", sans-serif; font-weight: 400; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); margin-top: 0.15rem; }
+  nav.top .links { display: flex; gap: 2rem; }
+  nav.top .links a {
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    color: var(--ink-soft);
+  }
+  nav.top .links a:hover { color: var(--ink); }
+  @media (max-width: 680px) {
+    nav.top .links { display: none; }
+  }
+
+  /* ---------- COORD RIBBON ---------- */
+  .coords {
+    background: var(--paper-deep);
+    border-bottom: 1px solid var(--rule);
+    font-family: "Inter", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-mute);
+    padding: 0.55rem 0;
+  }
+  .coords .inner {
+    max-width: 1240px; margin: 0 auto;
+    display: flex; justify-content: space-between; gap: 2rem;
+    padding: 0 2.25rem; flex-wrap: wrap;
+  }
+  .coords span + span { color: var(--ink-soft); }
+
+  /* ---------- HERO ---------- */
+  header.hero {
+    padding: 6rem 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero .wrap { position: relative; z-index: 2; }
+  header.hero .eyebrow { margin-bottom: 3rem; }
+  /* Faint topographic contour pattern behind hero */
+  header.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      radial-gradient(ellipse 800px 240px at 50% 60%, transparent 30%, rgba(28,25,23,0.04) 31%, transparent 32%),
+      radial-gradient(ellipse 1000px 300px at 50% 60%, transparent 35%, rgba(28,25,23,0.03) 36%, transparent 37%),
+      radial-gradient(ellipse 1200px 360px at 50% 60%, transparent 40%, rgba(28,25,23,0.025) 41%, transparent 42%),
+      radial-gradient(ellipse 1400px 420px at 50% 60%, transparent 45%, rgba(28,25,23,0.02) 46%, transparent 47%);
+    pointer-events: none;
+  }
+  header.hero h1 {
+    max-width: 14ch;
+    margin-bottom: 2rem;
+  }
+  header.hero h1 em { color: var(--moss); }
+  header.hero .deck {
+    max-width: 56ch;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 2vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 4rem;
+  }
+  header.hero .meta {
+    display: flex; flex-wrap: wrap; gap: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    margin-bottom: 4rem;
+  }
+  header.hero .meta .item .label {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  header.hero .meta .item .value {
+    font-family: "Fraunces", serif; font-weight: 400; font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  /* ---------- MIRROR HERO ART ---------- */
+  .mirror {
+    width: 100%;
+    margin: 0 auto 0;
+    padding: 0 2.25rem 4rem;
+    max-width: 1240px;
+    position: relative;
+    z-index: 2;
+  }
+  .mirror svg { width: 100%; height: auto; display: block; color: var(--ink); }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 7rem 0; position: relative; }
+  section.tight { padding: 5rem 0; }
+  .rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+
+  .section-head { max-width: 720px; margin-bottom: 4rem; }
+  .section-head .eyebrow { margin-bottom: 1.5rem; }
+  .section-head h2 { margin-bottom: 1.25rem; }
+
+  /* ---------- EDITORIAL BODY ---------- */
+  .editorial-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
+  }
+  @media (max-width: 900px) { .editorial-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .editorial-art {
+    aspect-ratio: 4/5;
+    background: var(--paper-deep);
+    display: grid; place-items: center;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .editorial-art svg { width: 78%; max-width: 320px; height: auto; }
+  .editorial p:first-of-type::first-letter {
+    font-family: "Fraunces", serif;
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 0.85;
+    float: left;
+    padding: 0.4rem 0.7rem 0 0;
+    color: var(--ink);
+  }
+  blockquote.pull {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 300;
+  }
+  blockquote.pull cite {
+    display: block; margin-top: 1rem;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+  }
+
+  /* ---------- DEEP-PAPER SECTION ---------- */
+  .deep { background: var(--paper-deep); }
+
+  /* ---------- HOUSE RULES ---------- */
+  .rules-list {
+    list-style: none; padding: 0; margin: 2rem 0 0;
+  }
+  .rules-list li {
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--rule);
+    display: grid; grid-template-columns: 56px 1fr auto; gap: 2rem;
+    align-items: center;
+  }
+  .rules-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .rules-list li .n {
+    font-family: "Fraunces", serif; font-style: italic;
+    color: var(--ink-mute); font-size: 1.05rem;
+  }
+  .rules-list li .t {
+    font-family: "Inter", sans-serif; font-size: 1rem; color: var(--ink);
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+  .rules-list li .t small {
+    display: block; font-weight: 400; color: var(--ink-soft); margin-top: 0.35rem; font-size: 0.97rem; line-height: 1.6;
+    max-width: 60ch;
+  }
+  .rules-list li .mark-art {
+    color: var(--ink-mute);
+    display: grid; place-items: center;
+    width: 56px; height: 56px;
+  }
+  .rules-list li .mark-art svg { width: 100%; height: 100%; }
+  @media (max-width: 700px) {
+    .rules-list li { grid-template-columns: 40px 1fr; gap: 1.25rem; }
+    .rules-list li .mark-art { display: none; }
+  }
+
+  /* ---------- THE ROAD ---------- */
+  .road-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center;
+  }
+  @media (max-width: 900px) { .road-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .road-art {
+    aspect-ratio: 5/4;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    display: grid; place-items: center;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .road-art svg { width: 80%; max-width: 360px; }
+
+  /* ---------- WATER (rental) ---------- */
+  .water-grid {
+    display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: center;
+  }
+  @media (max-width: 900px) { .water-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .water-art {
+    aspect-ratio: 1/1;
+    background: var(--paper-deep);
+    display: grid; place-items: center;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .water-art svg { width: 70%; max-width: 300px; }
+
+  .pillish {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 500; color: var(--ink);
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .pillish:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* ---------- WHEN TO GO TABLE ---------- */
+  .when-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 3rem;
+  }
+  @media (max-width: 700px) { .when-grid { grid-template-columns: 1fr; } }
+  .when-grid .cell {
+    padding: 2rem 1.5rem 2rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .when-grid .cell + .cell { padding-left: 2rem; }
+  @media (max-width: 700px) {
+    .when-grid .cell + .cell { padding-left: 0; }
+  }
+  .when-grid .cell .label {
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+  .when-grid .cell h3 {
+    font-size: 1.35rem; margin-bottom: 0.7rem;
+  }
+  .when-grid .cell p {
+    font-size: 0.97rem; margin: 0;
+  }
+
+  /* ---------- THE PACK ---------- */
+  .pack-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 4rem;
+  }
+  @media (max-width: 700px) { .pack-grid { grid-template-columns: 1fr; } }
+  .pack-col h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+    margin: 0 0 1rem; padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pack-col ul {
+    list-style: none; padding: 0; margin: 0;
+  }
+  .pack-col ul li {
+    padding: 0.55rem 0;
+    color: var(--ink-soft); font-size: 1rem;
+    display: grid; grid-template-columns: 26px 1fr; gap: 0.5rem;
+    align-items: baseline;
+  }
+  .pack-col ul li .n {
+    font-family: "Fraunces", serif; font-style: italic;
+    color: var(--ink-mute); font-size: 0.9rem;
+  }
+
+  /* ---------- HONEST TALK ---------- */
+  .honest p { max-width: 64ch; }
+
+  /* ---------- COLOPHON ---------- */
+  .colophon-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 3rem;
+  }
+  @media (max-width: 900px) { .colophon-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+  .colophon h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .colophon ul { list-style: none; padding: 0; margin: 0; }
+  .colophon ul li { margin-bottom: 0.5rem; font-size: 0.92rem; color: var(--ink-soft); }
+  .colophon ul li a { border: none; }
+  .colophon ul li a:hover { color: var(--ink); }
+
+  footer.foot {
+    padding: 3rem 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+  }
+  footer.foot .inner {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+  }
+  footer.foot em { font-family: "Fraunces", serif; font-weight: 400; }
+
+  /* ---------- ART STYLES ---------- */
+  .line-art {
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="top">
+  <div class="inner">
+    <a href="https://seatoskytrails.com/" class="mark">
+      <svg width="36" height="28" viewBox="0 0 36 28" class="line-art" aria-hidden="true">
+        <path d="M2 24 L8 14 L13 19 L19 8 L25 17 L30 12 L34 22"/>
+        <path d="M2 26 L34 26"/>
+      </svg>
+      <span class="mark-text">
+        Sea to Sky Trails
+        <small>Entry V &middot; Levette Lake</small>
+      </span>
+    </a>
+    <div class="links">
+      <a href="#idea">The Idea</a>
+      <a href="#road">The Road</a>
+      <a href="#rules">House Rules</a>
+      <a href="#when">When</a>
+      <a href="#pack">The Pack</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== COORD RIBBON ===================== -->
+<div class="coords">
+  <div class="inner">
+    <span>49° 49′ N &nbsp;·&nbsp; 123° 10′ W</span>
+    <span>Volume I &nbsp;·&nbsp; Entry V</span>
+    <span>Late Spring &mdash; Early Fall</span>
+    <span>Tantalus, Sḵwx̱wú7mesh territory</span>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Tantalus &nbsp;·&nbsp; Forest Service Road</span>
+    <h1>Levette Lake,<br>or <em>one of the<br>most beautiful</em><br>lakes in the world.</h1>
+    <p class="deck">A small alpine lake above the Squamish Valley, set under the Tantalus Range. The water lies still enough to show the mountains twice. A rough road, a few houses on the shore, a quiet curfew at eleven &mdash; the conditions that have kept it the way it is.</p>
+
+    <div class="meta">
+      <div class="item">
+        <div class="label">Access</div>
+        <div class="value">4&times;4 / AWD only</div>
+      </div>
+      <div class="item">
+        <div class="label">Best Season</div>
+        <div class="value">Late spring &ndash; early fall</div>
+      </div>
+      <div class="item">
+        <div class="label">Crowds</div>
+        <div class="value">Tight on weekends</div>
+      </div>
+      <div class="item">
+        <div class="label">Quiet Hours</div>
+        <div class="value">After 11 p.m.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HERO MIRROR ILLUSTRATION ===================== -->
+  <div class="mirror" aria-hidden="true">
+    <svg viewBox="0 0 1400 520" preserveAspectRatio="xMidYMid meet">
+      <g class="line-art">
+        <!-- Distant background ridge -->
+        <path opacity="0.35" stroke-width="1.1" d="M0 180 L120 150 L210 165 L290 130 L360 155 L440 115 L510 145 L590 100 L660 140 L730 110 L820 150 L900 120 L980 155 L1070 125 L1150 160 L1240 130 L1320 155 L1400 140"/>
+
+        <!-- Mid ridge with prominent peak (Mt. Tantalus reference) -->
+        <path opacity="0.7" stroke-width="1.25" d="M0 220 L100 195 L180 210 L260 175 L340 195 L420 160 L500 180 L580 95 L640 60 L700 100 L760 175 L840 145 L920 180 L1010 155 L1090 195 L1180 170 L1270 200 L1360 180 L1400 195"/>
+
+        <!-- Foreground ridge with treeline marks -->
+        <path d="M0 248 L80 225 L160 245 L240 215 L320 240 L400 210 L480 235 L560 205 L640 230 L720 210 L800 240 L880 215 L960 245 L1040 220 L1120 245 L1200 220 L1280 245 L1360 225 L1400 240"/>
+
+        <!-- Tree silhouettes on near shore (left and right) -->
+        <g transform="translate(120 245)">
+          <path d="M0 0 L0 -22"/>
+          <path d="M-6 -8 L0 -18 L6 -8"/>
+          <path d="M-4 -14 L0 -22 L4 -14"/>
+        </g>
+        <g transform="translate(155 245)">
+          <path d="M0 0 L0 -16"/>
+          <path d="M-5 -6 L0 -14 L5 -6"/>
+        </g>
+        <g transform="translate(1245 245)">
+          <path d="M0 0 L0 -20"/>
+          <path d="M-6 -8 L0 -17 L6 -8"/>
+          <path d="M-4 -14 L0 -20 L4 -14"/>
+        </g>
+        <g transform="translate(1280 245)">
+          <path d="M0 0 L0 -15"/>
+          <path d="M-5 -6 L0 -13 L5 -6"/>
+        </g>
+
+        <!-- WATERLINE (the mirror axis) -->
+        <path d="M0 260 L1400 260" stroke-width="1.1"/>
+
+        <!-- Single canoe on the water — scale element -->
+        <g transform="translate(700 260)">
+          <path d="M-26 0 Q0 7 26 0"/>
+          <path d="M-26 0 Q0 3 26 0"/>
+          <line x1="-2" y1="-3" x2="-2" y2="-12"/>
+          <circle cx="-2" cy="-15" r="2"/>
+          <!-- Paddle hint -->
+          <line x1="-2" y1="-9" x2="10" y2="-2" opacity="0.6"/>
+        </g>
+
+        <!-- ===== MIRROR REFLECTION (flipped, faded) ===== -->
+        <g opacity="0.32">
+          <!-- Reflected foreground ridge -->
+          <path d="M0 272 L80 295 L160 275 L240 305 L320 280 L400 310 L480 285 L560 315 L640 290 L720 310 L800 280 L880 305 L960 275 L1040 300 L1120 275 L1200 300 L1280 275 L1360 295 L1400 280"/>
+          <!-- Reflected mid ridge with the peak -->
+          <path opacity="0.85" stroke-width="1.25" d="M0 300 L100 325 L180 310 L260 345 L340 325 L420 360 L500 340 L580 425 L640 460 L700 420 L760 345 L840 375 L920 340 L1010 365 L1090 325 L1180 350 L1270 320 L1360 340 L1400 325"/>
+          <!-- Reflected distant ridge -->
+          <path opacity="0.5" stroke-width="1.1" d="M0 340 L120 370 L210 355 L290 390 L360 365 L440 405 L510 375 L590 420 L660 380 L730 410 L820 370 L900 400 L980 365 L1070 395 L1150 360 L1240 390 L1320 365 L1400 380"/>
+
+          <!-- Reflected trees -->
+          <g transform="translate(120 275)">
+            <path d="M0 0 L0 22"/>
+            <path d="M-6 8 L0 18 L6 8"/>
+            <path d="M-4 14 L0 22 L4 14"/>
+          </g>
+          <g transform="translate(155 275)">
+            <path d="M0 0 L0 16"/>
+            <path d="M-5 6 L0 14 L5 6"/>
+          </g>
+          <g transform="translate(1245 275)">
+            <path d="M0 0 L0 20"/>
+            <path d="M-6 8 L0 17 L6 8"/>
+            <path d="M-4 14 L0 20 L4 14"/>
+          </g>
+          <g transform="translate(1280 275)">
+            <path d="M0 0 L0 15"/>
+            <path d="M-5 6 L0 13 L5 6"/>
+          </g>
+        </g>
+
+        <!-- Quiet ripple marks across the water — very faint -->
+        <path d="M280 360 Q420 365 560 360" opacity="0.18"/>
+        <path d="M880 380 Q1000 384 1120 380" opacity="0.15"/>
+        <path d="M180 430 Q360 434 540 430" opacity="0.12"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<hr class="rule" />
+
+<!-- ===================== § I — THE IDEA ===================== -->
+<section id="idea">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ I &nbsp;·&nbsp; The Idea</span>
+      <h2>A small lake that holds the mountains still.</h2>
+    </div>
+
+    <div class="editorial-grid">
+      <div class="editorial-art">
+        <!-- Reflection mark — a single peak doubled on a hairline -->
+        <svg viewBox="0 0 280 360" class="line-art" aria-hidden="true">
+          <!-- Far ridge -->
+          <path opacity="0.5" d="M20 130 L70 110 L110 125 L140 70 L175 115 L210 95 L260 120"/>
+          <!-- Near ridge -->
+          <path d="M20 165 L60 145 L95 160 L140 90 L185 150 L220 130 L260 155"/>
+          <!-- Two tree silhouettes -->
+          <g transform="translate(45 165)">
+            <path d="M0 0 L0 -16"/>
+            <path d="M-5 -6 L0 -14 L5 -6"/>
+          </g>
+          <g transform="translate(235 158)">
+            <path d="M0 0 L0 -18"/>
+            <path d="M-5 -7 L0 -16 L5 -7"/>
+          </g>
+          <!-- Waterline -->
+          <path d="M10 180 L270 180" stroke-width="1.1"/>
+          <!-- Reflection (faded, flipped) -->
+          <g opacity="0.32">
+            <path d="M20 195 L60 215 L95 200 L140 270 L185 210 L220 230 L260 205"/>
+            <path opacity="0.7" d="M20 230 L70 250 L110 235 L140 290 L175 245 L210 265 L260 240"/>
+            <g transform="translate(45 195)">
+              <path d="M0 0 L0 16"/>
+              <path d="M-5 6 L0 14 L5 6"/>
+            </g>
+            <g transform="translate(235 202)">
+              <path d="M0 0 L0 18"/>
+              <path d="M-5 7 L0 16 L5 7"/>
+            </g>
+          </g>
+          <!-- A single canoe -->
+          <g transform="translate(140 178)">
+            <path d="M-18 0 Q0 5 18 0"/>
+            <path d="M-18 0 Q0 2 18 0"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="editorial">
+        <p>Levette is a small alpine lake tucked into the Tantalus, a half-hour off the highway and another half-hour up a road that is the price of admission. The Tantalus Range rises behind it &mdash; granite, snow, the kind of profile that makes the rest of the Coast Mountains feel introductory. On a still morning the lake gives the range back to itself: a clean horizontal, mountains above, mountains below, identical except quieter.</p>
+
+        <p>It is not a wilderness lake in the strict sense. There are a few private homes along the shore, a sand beach, the sound of someone&rsquo;s coffee being made. But it is also not a park. It sits in that uncommon middle category &mdash; lived-in but not loud, accessible but not easy &mdash; and the result is a place that feels held rather than developed.</p>
+
+        <blockquote class="pull">
+          &ldquo;One of the most beautiful lakes in the world.&rdquo;
+          <cite>House editor, on first sight</cite>
+        </blockquote>
+
+        <p>The case for that statement, in the editor&rsquo;s defence, is mostly the water. Levette is small enough that on a calm day the entire surface is a mirror. The peaks are close enough that the reflection is the dominant fact of the photograph. The trees on the far shore meet their twins. The canoe you brought has a second canoe under it, perfectly upside down. That is the whole point of the lake, and it is worth driving the road for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § II — THE ROAD ===================== -->
+<section id="road" class="deep">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ II &nbsp;·&nbsp; The Road</span>
+      <h2>The road is the reason it&rsquo;s still good.</h2>
+    </div>
+
+    <div class="road-grid">
+      <div>
+        <p>You leave the highway at Squamish Valley Road, cross the river, turn onto Paradise Valley Road, and a couple of kilometres in you find the Levette Lake Forest Service Road on the left, across from the outdoor school. From there it is roughly four-and-a-half kilometres of climbing gravel to the lake.</p>
+
+        <p>The road is not graded for sedans. It has loose rock, washouts in the rain, and sections steep enough that a low-clearance front-wheel drive will scrape, spin, or simply stop. A 4&times;4 or AWD with reasonable clearance is the right tool. In a Civic, you will get an education.</p>
+
+        <p>It is tempting to call this a problem. It is not a problem. The road is the filter. It is the reason Levette is a small lake with a small parking situation and a small number of visitors, instead of an Instagram queue. Everyone you meet at the top has, in some sense, earned being there. Drive it slowly, yield to vehicles coming down, give the locals room. The road is part of the place.</p>
+      </div>
+
+      <div class="road-art">
+        <!-- 4x4 + winding road -->
+        <svg viewBox="0 0 360 290" class="line-art" aria-hidden="true">
+          <!-- Distant ridge -->
+          <path opacity="0.45" d="M20 70 L70 50 L110 65 L150 30 L200 55 L240 40 L290 60 L340 50"/>
+          <!-- Treeline marks -->
+          <g opacity="0.55">
+            <g transform="translate(50 95)"><path d="M0 0 L0 -12"/><path d="M-4 -4 L0 -10 L4 -4"/></g>
+            <g transform="translate(75 100)"><path d="M0 0 L0 -10"/><path d="M-3 -4 L0 -9 L3 -4"/></g>
+            <g transform="translate(290 95)"><path d="M0 0 L0 -12"/><path d="M-4 -4 L0 -10 L4 -4"/></g>
+            <g transform="translate(315 100)"><path d="M0 0 L0 -10"/><path d="M-3 -4 L0 -9 L3 -4"/></g>
+          </g>
+          <!-- Winding gravel road -->
+          <path d="M30 270 C 90 240, 100 210, 160 195 S 250 175, 270 140 S 320 105, 340 95" stroke-width="1.5"/>
+          <path d="M50 270 C 110 240, 120 215, 175 200 S 260 180, 280 145 S 330 110, 350 100" opacity="0.5"/>
+          <!-- Loose rock dots along road -->
+          <circle cx="100" cy="245" r="1.5" opacity="0.6"/>
+          <circle cx="135" cy="225" r="1.5" opacity="0.6"/>
+          <circle cx="195" cy="200" r="1.5" opacity="0.6"/>
+          <circle cx="245" cy="170" r="1.5" opacity="0.6"/>
+          <circle cx="295" cy="130" r="1.5" opacity="0.6"/>
+          <!-- 4x4 silhouette on the road -->
+          <g transform="translate(150 192)">
+            <!-- Body -->
+            <path d="M-22 0 L-18 -10 L-8 -14 L 8 -14 L 14 -10 L 22 -10 L 22 0 Z"/>
+            <!-- Roof rack hint -->
+            <path d="M-10 -14 L 10 -14"/>
+            <path d="M-8 -16 L-8 -14 M 8 -16 L 8 -14"/>
+            <!-- Wheels -->
+            <circle cx="-13" cy="2" r="4"/>
+            <circle cx="14" cy="2" r="4"/>
+            <!-- Window -->
+            <path d="M-8 -12 L-4 -10 L 6 -10 L 8 -12" opacity="0.7"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § III — HOUSE RULES ===================== -->
+<section id="rules">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ III &nbsp;·&nbsp; The House Rules</span>
+      <h2>How to visit a lake people live on.</h2>
+      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">Levette has residents. A handful of homes sit along the shore &mdash; families, dogs, kitchen windows, real lives. Treating the lake like a backcountry campsite is how a good place gets ruined. None of this is hard.</p>
+    </div>
+
+    <ul class="rules-list">
+      <li>
+        <span class="n">i.</span>
+        <span class="t">
+          Show up early in the day.
+          <small>Parking is limited. On a summer weekend, the lot fills before mid-morning and the road shoulder is not a parking lot. A weekday morning is the ideal window. Sunrise is even better &mdash; it is also when the water is most still.</small>
+        </span>
+        <span class="mark-art">
+          <!-- Sunrise mark -->
+          <svg viewBox="0 0 56 56" class="line-art" aria-hidden="true">
+            <path d="M8 38 L48 38"/>
+            <path d="M16 38 A12 12 0 0 1 40 38"/>
+            <path d="M28 18 L28 12 M14 24 L10 20 M42 24 L46 20 M4 32 L0 32 M52 32 L56 32" opacity="0.7"/>
+          </svg>
+        </span>
+      </li>
+
+      <li>
+        <span class="n">ii.</span>
+        <span class="t">
+          Quiet by eleven p.m.
+          <small>There is a noise curfew on the lake because people live here. After 11, sound carries across still water and into houses with open windows. Speakers off, voices down, fires low. Treat the evening the way you would a friend&rsquo;s backyard &mdash; because that&rsquo;s what it is.</small>
+        </span>
+        <span class="mark-art">
+          <!-- Clock mark — hands at 11 -->
+          <svg viewBox="0 0 56 56" class="line-art" aria-hidden="true">
+            <circle cx="28" cy="28" r="20"/>
+            <path d="M28 28 L21 16"/>
+            <path d="M28 28 L28 14"/>
+            <path d="M28 10 L28 8 M28 48 L28 46 M8 28 L10 28 M48 28 L46 28" opacity="0.7"/>
+          </svg>
+        </span>
+      </li>
+
+      <li>
+        <span class="n">iii.</span>
+        <span class="t">
+          Park like a guest.
+          <small>Don&rsquo;t block driveways. Don&rsquo;t park on private shoulders. If the lot is full when you arrive, the answer is to come back another day, not to wedge in. Respecting the parking is the easiest way to be invited back implicitly.</small>
+        </span>
+        <span class="mark-art">
+          <!-- Small house mark -->
+          <svg viewBox="0 0 56 56" class="line-art" aria-hidden="true">
+            <path d="M10 30 L28 14 L46 30"/>
+            <path d="M14 30 L14 46 L42 46 L42 30"/>
+            <path d="M24 46 L24 34 L32 34 L32 46"/>
+          </svg>
+        </span>
+      </li>
+
+      <li>
+        <span class="n">iv.</span>
+        <span class="t">
+          Pack out everything you brought.
+          <small>Including the bits you didn&rsquo;t. The beach picks up trash from everyone who didn&rsquo;t bother &mdash; carry a small bag out with you. Cigarette filters count. Apple cores count. Lemon rinds count.</small>
+        </span>
+        <span class="mark-art">
+          <!-- Pack mark -->
+          <svg viewBox="0 0 56 56" class="line-art" aria-hidden="true">
+            <path d="M18 14 L18 22 L14 24 L14 46 L42 46 L42 24 L38 22 L38 14"/>
+            <path d="M22 14 L34 14"/>
+            <path d="M14 30 L42 30"/>
+            <path d="M24 36 L32 36"/>
+          </svg>
+        </span>
+      </li>
+
+      <li>
+        <span class="n">v.</span>
+        <span class="t">
+          Treat the water like the water.
+          <small>No soap in the lake. No sunscreen swim five minutes after applying. Pets on leash near the residences. The lake is small and what goes in stays in.</small>
+        </span>
+        <span class="mark-art">
+          <!-- Wave mark -->
+          <svg viewBox="0 0 56 56" class="line-art" aria-hidden="true">
+            <path d="M6 24 Q14 18 22 24 T 38 24 T 50 24"/>
+            <path d="M6 32 Q14 26 22 32 T 38 32 T 50 32" opacity="0.7"/>
+            <path d="M6 40 Q14 34 22 40 T 38 40 T 50 40" opacity="0.45"/>
+          </svg>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § IV — GETTING ON THE WATER ===================== -->
+<section id="water" class="deep">
+  <div class="wrap">
+    <div class="water-grid">
+      <div class="water-art">
+        <!-- Canoe + roof rack hint -->
+        <svg viewBox="0 0 300 300" class="line-art" aria-hidden="true">
+          <!-- Background ridge -->
+          <path opacity="0.4" d="M20 90 L60 60 L100 80 L140 45 L180 70 L220 55 L280 80"/>
+          <!-- Water -->
+          <path d="M0 190 Q150 200 300 190" opacity="0.5"/>
+          <path d="M0 210 Q150 218 300 210" opacity="0.3"/>
+          <!-- Vehicle -->
+          <g transform="translate(150 175)">
+            <!-- Canoe on roof -->
+            <path d="M-50 -35 Q0 -42 50 -35"/>
+            <path d="M-50 -35 Q0 -40 50 -35"/>
+            <!-- Body -->
+            <path d="M-40 -22 L-36 -30 L-20 -32 L 20 -32 L 32 -28 L 40 -22 L 40 -10 L-40 -10 Z"/>
+            <!-- Wheels -->
+            <circle cx="-26" cy="-6" r="6"/>
+            <circle cx="26" cy="-6" r="6"/>
+            <!-- Window -->
+            <path d="M-26 -28 L-20 -23 L 18 -23 L 24 -28" opacity="0.6"/>
+          </g>
+          <!-- Sun -->
+          <circle cx="240" cy="60" r="10" opacity="0.5"/>
+          <path d="M240 42 L240 38 M254 60 L258 60 M226 60 L222 60 M240 78 L240 82" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <div>
+        <span class="eyebrow">§ IV &nbsp;·&nbsp; Getting On The Water</span>
+        <h2 style="margin-top:1.5rem;">If you don&rsquo;t own a boat.</h2>
+        <p style="margin-top:1.5rem;">Most people who paddle Levette bring their own canoe, kayak, or board. It is a small lake and a short window of carry from lot to shoreline, so a hard-shell craft is workable if you have one.</p>
+        <p>If you don&rsquo;t, the realistic option is a rental in town. <a href="https://squamishcanoerental.com/canoe-delivery-squamish/">Squamish Canoe Rental</a> rents canoes and the soft roof racks that strap to almost any vehicle &mdash; meaning you can pick up a boat in Squamish and drive it up yourself, provided you&rsquo;ve already passed the 4&times;4 question. Delivery to the lake is available if the road is something you&rsquo;d rather not personally negotiate, though the road is, again, part of the experience.</p>
+        <p>An inflatable paddleboard in a duffel is also a sensible answer here. It fits in any vehicle, including the one you brought that does not, in fact, have AWD &mdash; in which case the road is still the gating problem, not the boat.</p>
+        <a href="https://squamishcanoerental.com/canoe-delivery-squamish/" class="pillish">Rental &amp; delivery options</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § V — WHEN TO GO ===================== -->
+<section id="when">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ V &nbsp;·&nbsp; When To Go</span>
+      <h2>The weekday morning is the whole answer.</h2>
+      <p class="lead" style="margin-top:1.5rem;color:var(--ink-soft);">Levette in late June at 7 a.m. on a Tuesday is the version of the lake the page is named for. Plan around that picture if you can.</p>
+    </div>
+
+    <div class="when-grid">
+      <div class="cell">
+        <div class="label">The Window</div>
+        <h3>Weekday morning, June &ndash; early September.</h3>
+        <p>Still water, soft light, no crowd. The mirror is most reliable before the wind comes up at midday. This is the trip you came for.</p>
+      </div>
+      <div class="cell">
+        <div class="label">The Reality</div>
+        <h3>Summer weekends are tight.</h3>
+        <p>By mid-morning on a Saturday in July the lot is full and the beach is full and the parking situation gets awkward. Arrive at dawn or come back Tuesday.</p>
+      </div>
+      <div class="cell">
+        <div class="label">The Secret</div>
+        <h3>September into early October.</h3>
+        <p>Cool mornings, warm afternoons, almost nobody. Larch isn&rsquo;t the story here but the quiet is. The road is at its driest. Bring a layer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § VI — THE PACK ===================== -->
+<section id="pack" class="deep">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ VI &nbsp;·&nbsp; The Pack</span>
+      <h2>What to bring for a day at Levette.</h2>
+    </div>
+
+    <div class="pack-grid">
+      <div class="pack-col">
+        <h4>On The Water</h4>
+        <ul>
+          <li><span class="n">i.</span><span>PFD per person &mdash; required, not optional.</span></li>
+          <li><span class="n">ii.</span><span>Boat: canoe, kayak, or inflatable SUP.</span></li>
+          <li><span class="n">iii.</span><span>Paddle leash if it&rsquo;s windy. Yes, even here.</span></li>
+          <li><span class="n">iv.</span><span>Dry bag for phone, keys, snacks.</span></li>
+          <li><span class="n">v.</span><span>Towel. The wind picks up after lunch.</span></li>
+        </ul>
+      </div>
+      <div class="pack-col">
+        <h4>On The Shore</h4>
+        <ul>
+          <li><span class="n">i.</span><span>Layer for cool morning, shorts for noon.</span></li>
+          <li><span class="n">ii.</span><span>Sun cover &mdash; the beach is exposed.</span></li>
+          <li><span class="n">iii.</span><span>Reef-safe sunscreen, applied early.</span></li>
+          <li><span class="n">iv.</span><span>Real water bottle &mdash; the lake is not drinking water.</span></li>
+          <li><span class="n">v.</span><span>Trash bag for everything you brought, and a little extra.</span></li>
+        </ul>
+      </div>
+      <div class="pack-col">
+        <h4>For The Road</h4>
+        <ul>
+          <li><span class="n">i.</span><span>4&times;4 or AWD with decent clearance.</span></li>
+          <li><span class="n">ii.</span><span>Spare tire that is, in fact, a tire.</span></li>
+          <li><span class="n">iii.</span><span>Offline map &mdash; cell service drops.</span></li>
+          <li><span class="n">iv.</span><span>Patience for one-lane sections.</span></li>
+        </ul>
+      </div>
+      <div class="pack-col">
+        <h4>Quietly Useful</h4>
+        <ul>
+          <li><span class="n">i.</span><span>Bear spray, on a hip &mdash; not in the trunk.</span></li>
+          <li><span class="n">ii.</span><span>Bug net or thermacell in early summer.</span></li>
+          <li><span class="n">iii.</span><span>Headlamp, in case the day runs long.</span></li>
+          <li><span class="n">iv.</span><span>A book. The lake reads well.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== § VII — HONEST TALK ===================== -->
+<section id="honest" class="honest">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ VII &nbsp;·&nbsp; Honest Talk</span>
+      <h2>What the brochure won&rsquo;t say.</h2>
+    </div>
+
+    <div class="wrap-narrow" style="padding:0;">
+      <p><em>On bears.</em> The Tantalus area is bear country, black and occasionally grizzly transiting through. Don&rsquo;t leave food in the open lot. Don&rsquo;t leave food in your boat. Make a little noise on the short walks and you almost never see anything.</p>
+
+      <p><em>On weather.</em> Mountain weather rolls in faster than your phone&rsquo;s forecast. A bluebird morning can be a whitecap afternoon. If the wind picks up while you&rsquo;re out on the water, head for the nearest shore and walk the boat back rather than fighting it.</p>
+
+      <p><em>On the road in rain.</em> Gravel that was easy on the way up gets greasy on the way down after a hard rain. Add time, leave earlier, use a low gear. If you don&rsquo;t feel confident driving down, you almost certainly should not have driven up.</p>
+
+      <p><em>On leave-no-trace.</em> Levette is small enough that a single careless visit shows. A cigarette butt in the sand is visible from a canoe. Pack everything out, including for the person who didn&rsquo;t. This is how lakes stay lakes.</p>
+
+      <p><em>On the &ldquo;most beautiful in the world&rdquo; claim.</em> It is the house editor&rsquo;s claim, and it&rsquo;s defended without qualification. Other lakes are welcome to disagree.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== COLOPHON ===================== -->
+<section id="colophon" class="colophon tight">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">§ VIII &nbsp;·&nbsp; Colophon</span>
+      <h2>Letters, leads, &amp; corrections.</h2>
+    </div>
+
+    <div class="colophon-grid">
+      <div>
+        <h4>This Entry</h4>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:1.05rem;color:var(--ink);max-width:36ch;line-height:1.5;">
+          Entry V of the Sea to Sky Trails. Written from a canoe, edited from a desk, fact-checked against the road.
+        </p>
+      </div>
+      <div>
+        <h4>Read More</h4>
+        <ul>
+          <li><a href="https://seatoskytrails.com/">Sea to Sky Trails</a></li>
+          <li><a href="https://seatoskytrails.com/#guides">All field guides</a></li>
+          <li><a href="https://seatoskytrails.com/#about">About the guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Submit</h4>
+        <ul>
+          <li><a href="mailto:hello@seatoskytrails.com">Pitch a guide</a></li>
+          <li><a href="mailto:hello@seatoskytrails.com">Correct a fact</a></li>
+          <li><a href="mailto:hello@seatoskytrails.com">Tell us about a lake</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://squamishcanoerental.com/canoe-delivery-squamish/">Canoe rental &amp; delivery</a></li>
+          <li><a href="https://squamishwatertaxi.com/">Squamish Water Taxi</a></li>
+          <li><a href="https://seatoskytrails.com/">Back to the Field Guide</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap inner">
+    <div>
+      <em>Sea to Sky Trails</em> &middot; Entry V, Levette Lake &middot; Published in Sḵwx̱wú7mesh territory.
+    </div>
+    <div>
+      &copy; 2026. Set in Fraunces &amp; Inter. Reader-funded.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
