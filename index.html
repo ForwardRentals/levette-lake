@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Levette Lake — A Field Guide to a Tantalus Lake, Squamish BC</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="A clear, honest field guide to Levette Lake in the Tantalus near Squamish, BC. The 4x4 road, the mirror mornings, the rentals, reviews, and the quiet hours locals respect.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -412,6 +413,22 @@
     stroke-linejoin: round;
   }
   .line.thin { stroke-width: 1.1; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { margin-top: 2rem; border-top: 1px solid var(--rule); }
+  details.faq-item { border-bottom: 1px solid var(--rule); }
+  details.faq-item > summary { list-style: none; cursor: pointer; outline: none; padding: 1.5rem 0; display: grid; grid-template-columns: 2rem 1fr 1.5rem; gap: 1rem; align-items: baseline; font-family: "Fraunces", serif; font-weight: 500; font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.012em; color: var(--ink); }
+  details.faq-item > summary::-webkit-details-marker { display: none; }
+  details.faq-item > summary:hover { color: var(--moss); }
+  .faq-item .q-n { font-family: "Fraunces", serif; font-style: italic; color: var(--ink-mute); font-size: 0.95rem; }
+  .faq-item .q-plus { font-family: "Inter", sans-serif; font-weight: 300; font-size: 1.5rem; color: var(--ink-mute); justify-self: end; line-height: 1; transition: transform 0.2s; }
+  details.faq-item[open] > summary .q-plus { transform: rotate(45deg); }
+  .faq-item .a { padding: 0 1.5rem 1.75rem 3rem; }
+  @media (max-width: 700px){ .faq-item .a { padding: 0 0 1.5rem 0; } }
+  .faq-item .a p { font-size: 1rem; margin: 0 0 0.9rem; color: var(--ink-soft); }
+  .faq-item .a p:last-child { margin: 0; }
+  .faq-item .a a { border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
+  .faq-item .a a:hover { border-bottom-color: var(--ink); }
 </style>
 </head>
 <body>
@@ -429,6 +446,7 @@
       <a href="#expect">What to expect</a>
       <a href="#water">Rentals</a>
       <a href="#reviews">Reviews</a>
+      <a href="#faq">Questions</a>
     </div>
   </div>
 </nav>
@@ -885,6 +903,25 @@
 </section>
 
 <!-- ===================== FOOTER ===================== -->
+<!-- ===================== FAQ ===================== -->
+<section class="deep" id="faq">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="section-eyebrow">Questions &amp; Answers</span>
+      <h2>The questions people actually ask about Levette Lake.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary><span class="q-n">01</span><span class="q-t">Can my car make it to Levette Lake, or do I need a 4&times;4?</span><span class="q-plus">+</span></summary><div class="a"><p>This is the question that matters. The Levette Lake Forest Service Road is about 4.5 km of climbing gravel with loose rock, potholes, and washouts after rain. A 4&times;4 or AWD vehicle with reasonable clearance is the right tool. A low-clearance sedan will scrape, spin, or stop &mdash; and the road gets greasy and worse on the way down after rain. If you don&rsquo;t have the clearance, that&rsquo;s the gating problem, not the boat.</p></div></details>
+      <details class="faq-item"><summary><span class="q-n">02</span><span class="q-t">Where do you park, and does the lot fill up?</span><span class="q-plus">+</span></summary><div class="a"><p>There&rsquo;s a small lot at the top that holds roughly nine cars, with pit toilets and garbage bins, and a short walk to the water. It fills before mid-morning on summer weekends. If it&rsquo;s full, the answer is to come back another day &mdash; not to wedge in or block the residents&rsquo; driveways. Arrive at dawn or come on a weekday.</p></div></details>
+      <details class="faq-item"><summary><span class="q-n">03</span><span class="q-t">Can you swim at Levette Lake?</span><span class="q-plus">+</span></summary><div class="a"><p>Yes &mdash; it&rsquo;s one of the nicer swims in the area. The water is clear and calm, there&rsquo;s a small sand beach, and there&rsquo;s a little island or rock out in the lake that&rsquo;s a fun swim target. No lifeguards, and the lake is small, so treat the water like the water: no soap, no sunscreen swim five minutes after applying.</p></div></details>
+      <details class="faq-item"><summary><span class="q-n">04</span><span class="q-t">Is there a noise curfew at Levette Lake?</span><span class="q-plus">+</span></summary><div class="a"><p>Yes. There&rsquo;s a quiet curfew after <strong>11 p.m.</strong> because people actually live on the lake &mdash; a handful of homes sit along the shore. After dark, sound carries across still water and straight into open windows. Speakers off, voices down, fires low. Treat the evening the way you&rsquo;d treat a friend&rsquo;s backyard, because that&rsquo;s effectively what it is.</p></div></details>
+      <details class="faq-item"><summary><span class="q-n">05</span><span class="q-t">Can I rent a canoe, or how do I get a boat up there?</span><span class="q-plus">+</span></summary><div class="a"><p>Most people bring their own, but if you don&rsquo;t have one, <a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Squamish Canoe Rental rents canoes and the soft roof racks</a> that strap to almost any vehicle &mdash; pick up a boat in town and drive it up yourself, provided you&rsquo;ve cleared the 4&times;4 question. Delivery to the lake is available too. An inflatable paddleboard in a duffel is also a smart answer: it packs into any car, so the road stays the only obstacle.</p></div></details>
+      <details class="faq-item"><summary><span class="q-n">06</span><span class="q-t">When&rsquo;s the best time to go to Levette Lake?</span><span class="q-plus">+</span></summary><div class="a"><p>A weekday morning, June through early September, is the whole answer. Still water, soft light, no crowd, and the road at its driest. The mirror is most reliable before the wind comes up at midday. September into early October is the quiet secret &mdash; cool mornings, almost nobody, but bring a layer.</p></div></details>
+      <details class="faq-item"><summary><span class="q-n">07</span><span class="q-t">Is Levette Lake good for photography?</span><span class="q-plus">+</span></summary><div class="a"><p>It&rsquo;s one of the best mirror-reflection lakes in the Sea to Sky. On a calm morning the whole surface doubles the Tantalus Range &mdash; peaks above, peaks below, the canoe with a second canoe underneath it. Get there at sunrise before any wind touches the water.</p><p>Want more like it? See <a href="https://lakelovelywater.com/">Lake Lovely Water</a> and the rest of the <a href="https://seatoskytrails.com/">Sea to Sky Trails</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
@@ -916,6 +953,23 @@
     </div>
   </div>
 </footer>
+
+<!-- ===================== FAQ STRUCTURED DATA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Can my car make it to Levette Lake, or do I need a 4x4?", "acceptedAnswer": { "@type": "Answer", "text": "The Levette Lake Forest Service Road is about 4.5 km of climbing gravel with loose rock, potholes, and washouts after rain. A 4x4 or AWD vehicle with reasonable ground clearance is the right tool. A low-clearance sedan will scrape, spin, or stop, and the road gets greasy and worse on the way down after rain. If you do not have the clearance, that is the gating problem." } },
+    { "@type": "Question", "name": "Where do you park at Levette Lake, and does the lot fill up?", "acceptedAnswer": { "@type": "Answer", "text": "There is a small lot at the top that holds roughly nine cars, with pit toilets and garbage bins and a short walk to the water. It fills before mid-morning on summer weekends. If it is full, come back another day rather than blocking residents' driveways. Arrive at dawn or come on a weekday." } },
+    { "@type": "Question", "name": "Can you swim at Levette Lake?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is one of the nicer swims in the area. The water is clear and calm, there is a small sand beach, and there is a little island or rock to swim to. There are no lifeguards, and the lake is small, so use no soap and avoid swimming right after applying sunscreen." } },
+    { "@type": "Question", "name": "Is there a noise curfew at Levette Lake?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, there is a quiet curfew after 11 p.m. because people live on the lake in homes along the shore. After dark, sound carries across still water into open windows, so keep speakers off, voices down, and fires low." } },
+    { "@type": "Question", "name": "Can I rent a canoe for Levette Lake, or how do I get a boat up there?", "acceptedAnswer": { "@type": "Answer", "text": "Most people bring their own, but Squamish Canoe Rental rents canoes and soft roof racks that strap to almost any vehicle, so you can pick up a boat in town and drive it up yourself once you have cleared the 4x4 question. Delivery to the lake is available. An inflatable paddleboard in a duffel also packs into any car." } },
+    { "@type": "Question", "name": "When is the best time to go to Levette Lake?", "acceptedAnswer": { "@type": "Answer", "text": "A weekday morning from June through early September is the best window: still water, soft light, no crowd, and the road at its driest. The mirror reflection is most reliable before the midday wind. September into early October is the quiet secret, with cool mornings and almost nobody around." } },
+    { "@type": "Question", "name": "Is Levette Lake good for photography?", "acceptedAnswer": { "@type": "Answer", "text": "It is one of the best mirror-reflection lakes in the Sea to Sky. On a calm morning the surface doubles the Tantalus Range, with peaks above and below. Arrive at sunrise before any wind touches the water for the cleanest reflection." } }
+  ]
+}
+</script>
 
 </body>
 </html>
